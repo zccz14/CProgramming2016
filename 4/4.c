@@ -81,7 +81,8 @@ void print(FILE *file, struct Class *class, char *displayName) {
 }
 
 struct Student *search(struct Class *class, char *keyword) {
-  for (int i = 0; i < class->studentCnt; i++) {
+  int i;
+  for (i = 0; i < class->studentCnt; i++) {
     struct Student *stu = &(class->students[i]);
     if (strcmp(keyword, stu->id) == 0 || strcmp(keyword, stu->name) == 0) {
       return stu;
